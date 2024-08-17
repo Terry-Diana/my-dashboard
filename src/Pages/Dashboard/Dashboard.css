@@ -1,0 +1,96 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.widgets-container {
+  display: grid;
+  grid-template-areas:
+    "weather todo news"
+    "crypto todo joke";
+  gap: 1rem;
+  height: 100%;
+  padding: 1rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.weather-widget {
+  grid-area: weather;
+  height: 300px;
+  padding: 1rem;
+  color: #f9f9f9;
+  border-radius: 0 40px 0 40px;
+  background-color: #00712D;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-widget {
+  grid-area: crypto;
+  height: 300px;
+  padding: 1rem;
+  border-radius: 40px 0 40px 0;
+  background-color: #FF9100;
+  color: #0A0E23;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-widget {
+  grid-area: news;
+  padding: 1rem;
+  max-height: 400px;
+  color: #0A0E23;
+  border-radius: 40px 0 0 0;
+  background-color: #FFF6E9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.joke-widget {
+  grid-area: joke;
+  height: 200px;
+  padding: 1rem;
+  border-radius: 0 40px 0 40px;
+  background-color: #C80036;
+  color: #f9f9f9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list-widget {
+  grid-area: todo;
+  padding: 1rem;
+  min-height: 300px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  border-radius: 8px;
+  background-color: #FFF5E1;
+  color: #0A0E23;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .widgets-container {
+    grid-template-areas:
+      "weather"
+      "todo"
+      "news"
+      "crypto"
+      "joke";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .news-widget {
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-widget, .crypto-widget, .joke-widget, .todo-list-widget, .news-widget {
+    height: auto;
+    padding: 0.5rem;
+  }
+}
+
+
