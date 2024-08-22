@@ -1,4 +1,3 @@
-// src/components/TodoListWidget/TodoListWidget.tsx
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { TodoItem, useTodoList } from '../../Hooks/useTodoList';
 import './TodoListWidget.css';
@@ -12,7 +11,7 @@ interface TodoListWidgetProps {
     toggleTodo: (id: number) => void;
     updateTodo: (id: number, newText: string) => void;
     clearTodos: () => void;
-    className?: string; // Added className prop
+    className?: string;
 }
 
 const TodoListWidget: React.FC<TodoListWidgetProps> = ({
@@ -24,7 +23,7 @@ const TodoListWidget: React.FC<TodoListWidgetProps> = ({
     toggleTodo,
     updateTodo,
     clearTodos,
-    className, // Include className prop
+    className, 
 }) => {
     const [newTodoText, setNewTodoText] = useState<string>('');
     const [editTodoId, setEditTodoId] = useState<number | null>(null);

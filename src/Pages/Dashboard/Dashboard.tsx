@@ -16,12 +16,11 @@ import { useFetchWeather } from "../../Hooks/useFetchWeather";
 import "./Dashboard.css";
 
 const Dashboard: React.FC = () => {
-  //Change location to be auto-picked
   const {
     data: weather,
     loading: weatherLoading,
     error: weatherError,
-  } = useFetchWeather("Nyeri");
+  } = useFetchWeather("Nairobi");
 
   const {
     data: crypto,

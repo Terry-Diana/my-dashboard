@@ -5,13 +5,13 @@
     color: #0A0E23;
     border-radius: 40px 0 0 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; /* Scroll bar on large screens */
-    max-height: 400px; /* Limiting height on large screens */
+    overflow-y: auto; 
+    max-height: 400px;
 }
 
 @media (max-width: 768px) {
     .news-widget {
-        max-height: none; /* Remove height limit on small screens */
-        overflow-y: visible; /* Remove scroll bar on small screens */
+        max-height: none; 
+        overflow-y: visible;
     }
 }

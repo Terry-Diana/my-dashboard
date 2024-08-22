@@ -1,14 +1,10 @@
-// src/hooks/useTodoList.ts
 import { useState } from 'react';
 
-// Define types for Todo item
 export interface TodoItem {
     id: number;
     text: string;
     completed: boolean;
 }
-
-// Define hook for managing todos
 export const useTodoList = () => {
     const [todos, setTodos] = useState<TodoItem[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
@@ -22,12 +18,10 @@ export const useTodoList = () => {
         ]);
     };
 
-    // Remove a todo by id
     const removeTodo = (id: number) => {
         setTodos((prevTodos) => prevTodos.filter(todo => todo.id !== id));
     };
 
-    // Toggle completion status of a todo
     const toggleTodo = (id: number) => {
         setTodos((prevTodos) =>
             prevTodos.map(todo =>
@@ -36,7 +30,6 @@ export const useTodoList = () => {
         );
     };
 
-    // Update an existing todo
     const updateTodo = (id: number, newText: string) => {
         setTodos((prevTodos) =>
             prevTodos.map(todo =>
@@ -45,7 +38,6 @@ export const useTodoList = () => {
         );
     };
 
-    // Clear all todos
     const clearTodos = () => {
         setTodos([]);
     };

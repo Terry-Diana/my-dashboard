@@ -8,7 +8,7 @@ interface NewsWidgetProps {
     }[] | null;
     loading: boolean;
     error: string | null;
-    className?: string; // Optional className prop
+    className?: string;
 }
 
 const NewsWidget: React.FC<NewsWidgetProps> = ({ news, loading, error, className }) => {
