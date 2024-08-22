@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API_KEY = 'cf38f9d476784f1dacad0226f2d3b345';
+const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
 
 interface NewsArticle {
     title: string;

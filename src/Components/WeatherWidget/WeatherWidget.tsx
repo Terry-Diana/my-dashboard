@@ -1,4 +1,3 @@
-// src/Components/WeatherWidget/WeatherWidget.tsx
 import React from 'react';
 
 interface WeatherData {
@@ -11,7 +10,7 @@ interface WeatherWidgetProps {
     weather: WeatherData | null;
     loading: boolean;
     error: string | null;
-    className?: string; // Added className prop
+    className?: string; 
 }
 
 const WeatherWidget: React.FC<WeatherWidgetProps> = ({ weather, loading, error, className }) => {
@@ -24,7 +23,7 @@ const WeatherWidget: React.FC<WeatherWidgetProps> = ({ weather, loading, error, 
                     <h2>Weather</h2>
                     <p>Temperature: {weather.temperature}°C</p>
                     <p>Description: {weather.description}</p>
-                    <img src={`http://openweathermap.org/img/wn/${weather.icon}.png`} alt={weather.description} />
+                    <img src={`http://openweathermap.org/img/wn/${weather.icon}@2.png`} alt={weather.description} />
                 </div>
             )}
             {!loading && !error && !weather && <p>No weather data available</p>}

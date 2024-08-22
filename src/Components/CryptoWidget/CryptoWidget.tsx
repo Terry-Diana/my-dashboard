@@ -10,7 +10,7 @@ interface CryptoWidgetProps {
     crypto: CryptoData[] | null;
     loading: boolean;
     error: string | null;
-    className?: string; // Optional className prop
+    className?: string; 
 }
 
 const CryptoWidget: React.FC<CryptoWidgetProps> = ({ crypto, loading, error, className }) => {

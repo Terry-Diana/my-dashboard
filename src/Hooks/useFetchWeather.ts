@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API_KEY = '41572fd9cb570b16d41a08be0aea5c77'; // Replace with your actual API key
+const API_KEY=process.env.REACT_APP_WEATHER_API_KEY;
 
 interface WeatherData {
     temperature: number;
